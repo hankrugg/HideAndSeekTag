@@ -23,15 +23,34 @@ class Player:
     def getXCoord(self):
         return self.xcoord
 
+    def checkValidMove(self, i, j, array):
+        if array[i][j] == 'x':
+            return False
+        return True
+
+    def simulateMove(self, direction):
+        if direction == "w":
+            x = self.xcoord - 1
+            return [x, self.ycoord]
+        elif direction == "s":
+            x = self.xcoord - 1
+            return [x, self.ycoord]
+        elif direction == "a":
+            y = self.ycoord - 1
+            return [self.xcoord, y]
+        elif direction == "d":
+            y = self.ycoord + 1
+            return [self.xcoord, y]
+
     def move(self, direction):
         if direction == "w":
-            self.ycoord -= 1
-        elif direction == "s":
-            self.ycoord += 1
-        elif direction == "a":
             self.xcoord -= 1
-        elif direction == "d":
+        elif direction == "s":
             self.xcoord += 1
+        elif direction == "a":
+            self.ycoord -= 1
+        elif direction == "d":
+            self.ycoord += 1
         else:
             print("Invalid direction")
 
