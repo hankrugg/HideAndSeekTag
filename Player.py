@@ -33,7 +33,7 @@ class Player:
             x = self.xcoord - 1
             return [x, self.ycoord]
         elif direction == "s":
-            x = self.xcoord - 1
+            x = self.xcoord + 1
             return [x, self.ycoord]
         elif direction == "a":
             y = self.ycoord - 1
@@ -59,6 +59,3 @@ class Player:
 
     def isReady(self):
         return self.ready
-
-
-
