@@ -24,7 +24,7 @@ class Player:
         return self.xcoord
 
     def checkValidMove(self, i, j, array):
-        if array[i][j] == 'x':
+        if array[i][j] != " ":
             return False
         return True
 

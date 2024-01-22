@@ -17,12 +17,12 @@ class Enemy(Player):
         x = randint(0, 1)
         if x == 0:
             if self.xcoord <= i:
-                self.xcoord += 1
+                return "s"
             else:
-                self.xcoord -= 1
+                return "w"
         if x == 1:
             if self.ycoord <= j:
-                self.ycoord += 1
+                return "d"
             else:
-                self.ycoord -= 1
+                return "a"
 
