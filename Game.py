@@ -71,6 +71,9 @@ class Game:
 
     def placeEnemies(self):
         # hard coded 3 enemies, this is where you could reduce or add enemies
+        # clear the enemies list for when the game is restarted
+        if len(self.enemies) > 1:
+            self.enemies.clear()
         for i in range(3):
             x = randint(1, 4)
             y = randint(1, 8)
@@ -104,6 +107,7 @@ class Game:
                 # draw the map a final time so the player knows where they died
                 self.map.drawMap()
                 self.isOver = True
+                self.map.resetMap()
 
     def playGame(self):
         # game play flow
