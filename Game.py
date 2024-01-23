@@ -4,9 +4,9 @@
  Game Class for Hide and Seek Tag, console based version.This class controls the game.
 
 '''
+
 import sys
 from random import randint
-
 from Enemy import Enemy
 from Map import Map
 from Player import Player
@@ -101,6 +101,8 @@ class Game:
         for enemy in self.enemies:
             # check if each enemy is on the player which indicates a "kill"
             if enemy.xcoord == self.player.xcoord and enemy.ycoord == self.player.ycoord:
+                # draw the map a final time so the player knows where they died
+                self.map.drawMap()
                 self.isOver = True
 
     def playGame(self):

@@ -16,7 +16,8 @@ class Enemy(Player):
     def search(self, i, j):
         # search component that is used to decide where the enemy will go
         x = randint(0, 1)
-        # half of the time it will move its x component and half the time it will move its y component
+        # half of the time it will move its x component and half the time it will
+        # move its y component
         if x == 0:
             if self.xcoord <= i:
                 return "s"
